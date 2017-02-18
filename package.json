@@ -1,0 +1,11 @@
+{
+  "name": "clitosheet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cagdas Dag <cagdasdag81@gmail.com> (https://github.com/cagdasdag/)",
+  "license": "ISC"
+}
