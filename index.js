@@ -15,7 +15,7 @@ var TOKEN_DIR = (process.env.HOME || process.env.HOMEPATH ||
 var TOKEN_PATH = TOKEN_DIR + 'sheets.googleapis.com-nodejs-quickstart.json';
 
 // Get json data
-fs.readFile('client_secret.json', function processClientSecrets(err, content) {
+fs.readFile(TOKEN_DIR + 'client_secret.json', function processClientSecrets(err, content) {
   if (err) {
     console.log('Error loading client secret file: ' + err);
     return;
