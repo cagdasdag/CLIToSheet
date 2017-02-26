@@ -9,9 +9,10 @@
   "author": "Cagdas Dag <cagdasdag81@gmail.com> (https://github.com/cagdasdag/)",
   "license": "ISC",
   "bin": {
-   "cls": "index.js"
+    "cls": "index.js"
   },
   "dependencies": {
+    "dotenv": "^4.0.0",
     "google-auth-library": "^0.10.0",
     "googleapis": "^16.1.0"
   }

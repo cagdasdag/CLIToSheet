@@ -4,9 +4,14 @@ var fs = require('fs');
 var readline = require('readline');
 var google = require('googleapis');
 var googleAuth = require('google-auth-library');
+var dotenv = require('dotenv');
 
 // General Variables
 var sheets = google.sheets('v4');
+
+// Get ENV
+dotenv.load();
+var spreadsheetId = process.env.spreadsheetId;
 
 // Google Auth Settings
 var SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
@@ -109,7 +114,7 @@ function welcomeToCli(auth){
 function getRows(auth, item, command, amount) {
   sheets.spreadsheets.values.get({
     auth: auth,
-    spreadsheetId: '1DDQkwZa1CkZxQswVDXlaquGRiryp3Xooc92vHncoWxU',
+    spreadsheetId: spreadsheetId,
     range: 'A:Z',
   }, function(err, response) {
     if (err) {
@@ -135,7 +140,7 @@ function getRows(auth, item, command, amount) {
 function updateAll(auth,rows){
 	sheets.spreadsheets.values.batchUpdate({
     auth: auth,
-    spreadsheetId: '1DDQkwZa1CkZxQswVDXlaquGRiryp3Xooc92vHncoWxU',
+    spreadsheetId: spreadsheetId,
     resource : {
       valueInputOption: "RAW",
       data: [
